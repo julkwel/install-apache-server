@@ -46,14 +46,23 @@ nano /etc/apache2/sites-available/your.conf
 
 *Add this line*
 
-*NameVirtualHost Your server-ip-adress or your domain.name        
-        <VirtualHost your ip adress:80>  
+```
+NameVirtualHost Your server-ip-adress or your domain.name
+
+        <VirtualHost your ip adress:80>
+        
         DocumentRoot /you/directory
-        <Directory /you/directory> 
-                Order allow,deny     
-                Allow from all     
+        
+        <Directory /you/directory>
+        
+                Order allow,deny
+                
+                Allow from all 
+                
         </Directory>
-</VirtualHost>*
+        
+</VirtualHost>
+```
 
 You need to ensite your configuration
 
@@ -63,7 +72,7 @@ Deactivates a default configuration file 00-default.conf
 
 *a2dissite 00-default.conf*
 
-**Restart apache **
+**Restart apache**
 *sudo service apache2 restart*
 
 Edit your apache configuration
