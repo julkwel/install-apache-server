@@ -4,13 +4,14 @@ How to install apache server.
 > This is the simple way to install  **Apache server**.
 1. You need to know what the developer or you need.
 2. I just need apache and phpmyadmin and git & php
+
 **Lets start**
 > First update your system apt
 
 *sudo apt-get update*
 
 Then
-> Add the php repository on your source liste
+> Add the php repository on your source list
 ___
 
 *sudo apt install apt-transport-https lsb-release ca-certificates*
