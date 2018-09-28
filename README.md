@@ -86,6 +86,10 @@ Restart your web server
 
 *sudo service apache2 restart*
 
+no open the browser
+
+http://your_ip
+
 **Happy hacking**
 
 
