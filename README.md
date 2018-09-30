@@ -67,6 +67,7 @@ Deactivates a default configuration file 00-default.conf
 *a2dissite 00-default.conf*
 
 **Restart apache**
+
 *sudo service apache2 restart*
 
 Edit your apache configuration
