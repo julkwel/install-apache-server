@@ -1,7 +1,7 @@
 # install-apache-server
 
 How to install apache server.
-> This is the simple way to install  **Apache server**.
+> This is the easy way to install  **Apache server**.
 1. You need to know what the developer or you need.
 2. I just need apache and phpmyadmin and git & php
 
@@ -49,19 +49,12 @@ nano /etc/apache2/sites-available/your.conf
 
 ```
 NameVirtualHost Your server-ip-adress or your domain.name
-
         <VirtualHost your ip adress:80>
-        
         DocumentRoot /you/directory
-        
         <Directory /you/directory>
-        
                 Order allow,deny
-                
                 Allow from all 
-                
         </Directory>
-        
 </VirtualHost>
 ```
 
