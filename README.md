@@ -8,42 +8,42 @@ How to install apache server.
 **Lets start**
 > First update your system apt
 
-*sudo apt-get update*
+```sudo apt-get update```
 
 Then
 > Add the php repository on your source list
 ___
 
-*sudo apt install apt-transport-https lsb-release ca-certificates*
+```sudo apt install apt-transport-https lsb-release ca-certificates```
 ___
-*wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg*
+```wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg```
 ___
-*echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" >> /etc/apt/sources.list*
+```echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" >> /etc/apt/sources.list```
 ___
 Then 
-*sudo apt update*
+```sudo apt update```
 
-Now , install the php and dependancy for main I need php7.1
+Now , install the php and dependancy for main I need php7.2
 
-*apt install apache2 php7.1 php7.1-cli php7.1-common php7.1-curl php7.1-gd php7.1-json php7.1-mbstring php7.1-mysql php7.1-xml*
+```sudo apt-get install php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-intl php7.2-mysql php7.2-xml php7.2-zip```
 ___
 Install Mysql-server
 
-*sudo apt install mysql-server*
+```sudo apt install mysql-server```
 ___
 Then install php-myadmin
 
-*apt-get install phpmyadmin*
+```sudo apt-get install phpmyadmin```
 ___
 **Created a symlink for phpmyadmin**
 
-cd /var/www/html/
+```cd /var/www/html/
 
-sudo ln -s /usr/share/phpmyadmin
+sudo ln -s /usr/share/phpmyadmin```
 
 If you need git install it
 
-*sudo apt-get install git*
+```sudo apt-get install git```
 ___
 **Its time to configure**
 You need to know that the apache sites-availables configuration is locate here */etc/apache2/sites-available*
@@ -52,7 +52,7 @@ Create your file configuration , */etc/apache2/sites-available/your.conf*
 
 Edit your file configuration  with your best editor
 
-nano /etc/apache2/sites-available/your.conf
+```nano /etc/apache2/sites-available/your.conf```
 
 *Add this line*
 
@@ -69,25 +69,25 @@ NameVirtualHost Your server-ip-adress or your domain.name
 
 You need to ensite your configuration
 
-*a2ensite your.conf*
+```a2ensite your.conf```
 
 Deactivates a default configuration file 00-default.conf
 
-*a2dissite 00-default.conf*
+```a2dissite 00-default.conf```
 
 **Restart apache**
 
-*sudo service apache2 restart*
+```service apache2 restart```
 
 Edit your apache configuration
 
 *edit /etc/apache2/apache2.conf with your editor and set AllowOverride None to All , **This is important** *
 
-*a2enmod rewrite*
+```a2enmod rewrite```
 
 Restart your web server
 
-*sudo service apache2 restart*
+```sudo service apache2 restart```
 
 no open the browser
 
