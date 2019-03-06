@@ -45,7 +45,7 @@ If you need git install it
 
 ```sudo apt-get install git```
 ___
-**Its time to configure**
+Its time to configure
 You need to know that the apache sites-availables configuration is locate here */etc/apache2/sites-available*
 
 Create your file configuration , */etc/apache2/sites-available/your.conf*
@@ -92,6 +92,19 @@ Restart your web server
 no open the browser
 
 http://your_ip
+
+```
+Problème mpahazo 
+in ./libraries/sql.lib.php#613
+ count(): Parameter must be an array or an object that implements Countable
+ 
+ **Solutions**
+ ```sudo sed -i "s/|\s*\((count(\$analyzed_sql_results\['select_expr'\]\)/| (\1)/g" /usr/share/phpmyadmin/libraries/sql.lib.php```
+ 
+  in ./libraries/plugin_interface.lib.php#551
+ count(): Parameter must be an array or an object that implements Countable
+ 
+ ```if ($options != null && count((array)$options) > 0) {``` ligne 532
 
 **Happy hacking**
 
