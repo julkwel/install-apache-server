@@ -23,9 +23,9 @@ ___
 Then 
 ```sudo apt update```
 
-Now , install the php and dependancy for main I need php7.2
+Now , install the php and dependencies.
 
-```sudo apt-get install php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-intl php7.2-mysql php7.2-xml php7.2-zip```
+```sudo apt-get install php7.4 php7.4-curl php7.4-gd php7.4-json php7.4-mbstring php7.4-intl php7.4-mysql php7.4-xml php7.4-zip```
 ___
 Install Mysql-server
 
